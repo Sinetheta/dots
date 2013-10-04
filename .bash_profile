@@ -1,7 +1,6 @@
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
-export PATH="/Users/kevinattfield/Sites/yeoman/yeoman-custom/cli/bin:$PATH"
 
-alias subl="sublime"
+alias st="sublime"
 alias sites="cd ~/Sites/"
 alias desk="cd ~/Desktop/"
 alias ..="cd ../"
@@ -10,6 +9,11 @@ alias ...="cd ../../"
 # Install a npm plugin and save to devDependencies
 function ni() {
   npm install --save-dev "$@"
+}
+
+# Install a bower plugin and save to dependencies
+function bi() {
+  bower install --save "$@"
 }
 
 # clones a repository, cds into it, and opens it in my editor.
@@ -99,3 +103,4 @@ PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 [[ -s /Users/kevinattfield/.nvm/nvm.sh ]] && . /Users/kevinattfield/.nvm/nvm.sh # This loads NVM
+eval "$(rbenv init -)"
